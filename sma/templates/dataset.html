@@ -1,0 +1,39 @@
+{% include "include/header.html" %}
+<!-- Fixed navbar -->
+
+<div class="navi">
+    <div class="container">
+        <h1>数据集</h1>
+    </div>
+</div>
+<div class="container page-content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="grid-container">
+                <div class="col-xs-6 col-sm-2 sidebar-offcanvas" id="sidebar" role="navigation">
+                    <div data-spy="affix" data-offset-top="45" data-offset-bottom="90" class="affix-top">
+                        <ul class="nav" id="sidebar-nav">
+                            <li><a href="#section1">数据须知</a></li>
+                            <li><a href="#section2">微博数据</a></li>
+                            <li><a href="#section3">大众点评数据</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-9" data-spy="scroll" data-target="#sidebar-nav">
+                    <h1 id="section1">数据获取须知</h1>
+                    <p>
+                        复旦大学自然语言处理实验室数据关于其收集、整理所得到的海量网络信息与标注数据的通用公共许可证文件。 用户下载、使用数据资料，即表示用户接受本文件的所有条款。所有违反本条款的行为都将被视为对数据知识产权的侵犯。
+
+                    </p>
+
+                    <h1 id="section2">微博数据</h1>
+                    <p>微博数据由实验室收集整理,共有15亿的推文数据和200多万的用户数据。
+                        由于限定了每个用户最多采集 50 页微博数据的采集机制,用户-微博分布相 对比较均衡,每个用户平均发布了 734 条微博,具体到微博页面也是是平均 16.3 页。
+                        在全部的微博数据中,含有 hashtag 的微博一共有 2.5 亿条,而出现过的 hashtag 数量一共有 3.1 亿个。</p>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% include 'include/footer.html' %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>复旦大学自然语言处理实验室SMA</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{%  static "css/lib/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{%  static "css/lib/font-awesome.css" %}" rel="stylesheet">
+
+    <link href="{% static "css/style.css" %}"  rel="stylesheet">
+    <link href="{% static "css/sidebar.css" %}" rel="stylesheet">
+
+
+</head>
+
+<body>
+<nav class="navbar  navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">SMA</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">首页</a></li>
+                <li><a href="/dataset">数据分享</a></li>
+                <li><a href="/static/html/index.html">开发者</a></li>
+                <li><a href="/paper">论文</a></li>
+                <li><a href="/about">联系</a></li>
+
+            </ul>
+        </div><!-- /.nav-collapse -->
+    </div><!-- /.container -->
+</nav><!-- /.navbar -->

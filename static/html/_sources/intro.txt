@@ -1,0 +1,47 @@
+关键词提取
+=================================
+关键词提取是社会媒体分析和挖掘中应用范围很广，关键词提取可以获取社交媒体中每句话的关键词。
+
+**URL**::
+
+   http://sma.fudan.edu.cn/keywords
+
+**HTTP Method**::
+
+   POST方式
+
+**HTTP query string 参数**::
+
+    data 请求分析的数据
+
+**HTTP 返回 Body**::
+
+  JSON 格式的引擎提取出的关键词相应的权重和关键词组成的列表。
+
+**CURL 调用示例**::
+
+  curl -X POST \
+    --data "\"\u75c5\u6bd2\u5f0f\u5a92\u4f53\u7f51\u7ad9\uff1a\u8ba9\u65b0\u95fb\u8fc5\u901f\u8513\u5ef6\"" \
+    http://sma.fudan.edu.cn/keywords
+
+**Python 调用示例**::
+
+   # -*- encoding: utf-8 -*-
+  from __future__ import print_function, unicode_literals
+  import json
+  import requests
+
+  KEYWORDS_URL = 'http://sma.fudan.edu.cn/keywords'
+  param = {'data': '李世石围棋九段与Alphago交战前两局都失败了'}
+  res=requests.get(KEYWORDS_URL, params=param)
+  for item in  res.json():
+    print(item['word'],item['weight'])
+
+**结果**::
+
+ python keywords_api.py
+  李世石     0.240963826846
+  围棋       0.240963826846
+  alpha     0.240963826846
+  交战       0.240963826846
+  失败       0.0361446926148

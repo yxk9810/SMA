@@ -1,0 +1,27 @@
+/*
+ * Style tweaks
+ * --------------------------------------------------
+ */
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+body,
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  min-width: 970px;
+}
+.footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+}
+
+.footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+}
