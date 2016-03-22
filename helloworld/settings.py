@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'annotation',
         'USER': 'root',
         'PASSWORD': 'root',
-        'HOST': '',
+        'HOST': '10.141.250.170',
         'PORT': '',
     }
 }

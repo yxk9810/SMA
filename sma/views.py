@@ -39,7 +39,7 @@ def annotation(request,questionid):
         if  not  'username' in request.session:
            	return render(request, 'signin.html', {})
         else:
-            db = MySQLdb.connect(user='root', db='annotation', passwd='root', host='localhost',charset="utf8")
+            db = MySQLdb.connect(user='root', db='annotation', passwd='root', host='10.141.250.170',charset="utf8")
             cursor = db.cursor()
             cursor.execute('SELECT max(id) as icount  FROM questions ')
             res = cursor.fetchone()
@@ -58,7 +58,7 @@ def annotation(request,questionid):
             else:
                 print num,questionid
 def label(request):
-    db = MySQLdb.connect(user='root', db='annotation', passwd='root', host='localhost',charset="utf8")
+    db = MySQLdb.connect(user='root', db='annotation', passwd='root', host='10.141.250.170',charset="utf8")
     cursor = db.cursor()
     questionid = request.GET.get('questionid', '-1');
     answer     = request.GET.get('answer','-1')
@@ -84,7 +84,7 @@ def label(request):
 user login
 """
 def login(request):
-    db = MySQLdb.connect(user='root', db='annotation', passwd='root', host='localhost',charset="utf8")
+    db = MySQLdb.connect(user='root', db='annotation', passwd='root', host='10.141.250.170',charset="utf8")
     cursor = db.cursor()
     username = request.POST.get('username')
     password = request.POST.get('password')
