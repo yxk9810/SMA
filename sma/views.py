@@ -53,7 +53,7 @@ def annotation(request,questionid):
                 dict = {}
                 for (name, value) in zip(desc, res) :
                     dict[name[0]] = value
-                dict['next'] = dict['id']+1 if questionid< num else -1 
+                dict['next'] = int(dict['id'])+1 if int(questionid)< num else -1 
                 return render(request, 'annotation.html',dict)
             else:
                 print num,questionid
