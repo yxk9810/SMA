@@ -66,16 +66,14 @@ def label(request):
               "(username, questionid, answer, createtime) "
               "VALUES (%(username)s, %(questionid)s, %(answer)s, %(createtime)s)")
     data_salary = {
-      'questionid': questionid,
-      'answer': answer,
-      'username': 'tomorrow',
+      'username': request.session['username'],
+      'questionid':int( questionid),
+      'answer': int(answer),
       'createtime':datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
     cursor.execute(add_userlog, data_salary)
     count  = cursor.rowcount if cursor.rowcount > 0 else 0  
-    db.commit
-    cursor.close()
-    db.close()
+    db.commit()
     if count:
     	return  HttpResponse(json.dumps({'code':1}))
     else:
